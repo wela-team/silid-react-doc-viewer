@@ -36,7 +36,7 @@ const PDFControls: FC<{}> = () => {
             {paginated && numPages > 1 && <PDFPagination />}
 
             {/* delete the old build */}
-            {currentDocument?.fileData && (
+            {/* {currentDocument?.fileData && (
                 <DownloadButton
                     id="pdf-download"
                     href={currentDocument?.fileData as string}
@@ -44,7 +44,7 @@ const PDFControls: FC<{}> = () => {
                 >
                     <DownloadPDFIcon color="#000" size="75%" />
                 </DownloadButton>
-            )}
+            )} */}
 
             <ControlButton
                 id="pdf-zoom-out"
