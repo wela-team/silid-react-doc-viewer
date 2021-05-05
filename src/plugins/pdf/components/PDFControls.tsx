@@ -24,11 +24,18 @@ const PDFControls: FC<{}> = () => {
     const fileName = currentDocument?.uri;
     const reg1 = /..*%2F(.*?)\?alt/
     // @ts-ignore
-    const finalFileName = fileName.split(reg1)[1]
+    const semifinalFileName = fileName.split(reg1)[1];
+    let finalFileName
+    if(semifinalFileName.includes("%20")) {
+        finalFileName = semifinalFileName.replaceAll("%20","-");
+    } else {
+        finalFileName = semifinalFileName
+    }
     return (
         <Container id="pdf-controls">
             {paginated && numPages > 1 && <PDFPagination />}
 
+            {/* delete the old build */}
             {currentDocument?.fileData && (
                 <DownloadButton
                     id="pdf-download"
