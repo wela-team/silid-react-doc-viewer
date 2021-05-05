@@ -46,6 +46,8 @@ const PDFControls: FC<{}> = () => {
                 </DownloadButton>
             )} */}
 
+            {/* rebuild */}
+
             <ControlButton
                 id="pdf-zoom-out"
                 onMouseDown={() => dispatch(setZoomLevel(zoomLevel - 0.1))}
