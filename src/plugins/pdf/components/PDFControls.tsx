@@ -26,11 +26,16 @@ const PDFControls: FC<{}> = () => {
     // @ts-ignore
     const semifinalFileName = fileName.split(reg1)[1];
     let finalFileName
-    if(semifinalFileName.includes("%20")) {
-        finalFileName = semifinalFileName.replaceAll("%20","-");
-    } else {
-        finalFileName = semifinalFileName
+    try {
+        if(semifinalFileName.includes("%20")) {
+            finalFileName = semifinalFileName.replaceAll("%20","-");
+        } else {
+            finalFileName = semifinalFileName
+        }
+    } catch (err) {
+        finalFileName = fileName?.split("%3F")[1]
     }
+    
     return (
         <Container id="pdf-controls">
             {paginated && numPages > 1 && <PDFPagination />}
