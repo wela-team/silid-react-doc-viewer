@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { IIconProps } from "../../../../components/icons";
 export declare const PrevPDFNavIcon: (props: IIconProps) => JSX.Element;
 export declare const NextPDFNavIcon: (props: IIconProps) => JSX.Element;
