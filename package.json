@@ -5,7 +5,7 @@
     "author": "Matthew Mogford",
     "license": "ISC",
     "repository": {
-        "url": "git@github.com:wela-team/silid-react-doc-viewer.git"
+        "url": "https://github.com/wela-team/silid-react-doc-viewer.git"
     },
     "main": "build/index.js",
     "types": "build/index.d.ts",
